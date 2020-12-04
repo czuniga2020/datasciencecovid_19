@@ -1,0 +1,31 @@
+---
+title: "DataCOVID19"
+author: "Carlos Zuniga-Gonzalez"
+date: "2/12/2020"
+output:
+  html_document
+    
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+
+```
+
+## Data COVID-19
+
+This data is for measure the correlation between solar activity and covid cases. The source for solar activity we support the International Service of Geomagnetic Indices http://isgi.unistra.fr/data_plot.php and for the cases covid Worldometer https://www.worldometers.info/coronavirus/ 
+
+```{r aaCovid}
+summary(apcoviddeath)
+```
+##	DATE	      aa	     covid
+
+
+```{r, fig.width=10, fig.height=2, fig.fullwidth=TRUE}
+par(mar = c(4, 4, .1, .2)); plot(apcoviddeath)
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
